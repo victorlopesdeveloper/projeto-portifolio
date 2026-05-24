@@ -1,2 +1,3 @@
 # projeto-portifolio
-Projeto Final do Curso em Video de HTML5 e CSS3
+Meu portifólio de apresentação como desenvolverdor!
+link: https://victorlopesdeveloper.github.io/projeto-portifolio/
