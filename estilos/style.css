@@ -9,18 +9,27 @@
   box-sizing: border-box;
 }
 :root{
-   --fundo-principal: #f5f5f5;
+  --fundo-principal: #f5f5f5;
   --texto: #222222;
   --texto-inverso: #ffffff;
   --destaque: #0077ff;
   --destaque-inverso: #66bbff;
   --fundo-card: #ffffff;
 }
+body.escuro{
+  --fundo-principal: #222222;
+  --texto: #e0e0e0;
+  --texto-inverso: #333333;
+  --destaque: #ff5522;
+  --destaque-inverso: #a73917;
+  --fundo-card: #444444;
+}
 body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5em;
    background-color: var(--fundo-principal);
    color: var(--texto);
+   transition: background-color 0.5s, color 0.5s;
 }
 header{
   background-color: var(--destaque);
@@ -223,7 +232,9 @@ footer a:hover{
 
 @media screen and (min-width: 850px){
   main{
-    grid-template-columns: auto 300px 1fr auto;
+    grid-template-columns: auto 350px 1fr auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
   section#ficha{
     grid-column: 2 / 3 ;
@@ -237,17 +248,23 @@ footer a:hover{
 
   #skill-container{
     grid-template-columns: 1fr 1fr;
+    
   }
   #projeto-container .projeto{
     flex-direction: row-reverse;
     justify-content: space-between;
   }
   #projeto-container .projeto-info{
-    max-width: 80%;
+    max-width: 70%;
   }
   #projeto-container .foto{
     aspect-ratio: 1/1;
-    max-width: 20%;
+    max-width: 30%;
     max-height: 200px;
+  }
+}
+@media screen and (min-width: 1000px){
+  main{
+    grid-template-columns: auto 500px 1fr auto;
   }
 }
